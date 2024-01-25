@@ -1,0 +1,92 @@
+class Movie:
+    def __init__(self, title, genre):
+        self.title = title
+        self.genre = genre
+
+class MovieRecommendationSystem:
+    def __init__(self):
+        self.movies = []
+
+    def add_movie(self, title, genre):
+        movie = Movie(title, genre)
+        self.movies.append(movie)
+
+    def recommend_movies(self, user_genre_preference):
+        recommended_movies = []
+
+        for movie in self.movies:
+            if movie.genre.lower() == user_genre_preference.lower():
+                recommended_movies.append(movie)
+
+        return recommended_movies
+
+if __name__ == "__main__":
+    recommendation_system = MovieRecommendationSystem()
+
+    # Action movies
+    recommendation_system.add_movie("Die Hard", "Action")
+    recommendation_system.add_movie("Mission Impossible", "Action")
+    recommendation_system.add_movie("The Extraction", "Action")
+    recommendation_system.add_movie("The Expandables", "Action")
+recommendation_system.add_movie("Venom", "Action")
+    recommendation_system.add_movie("X-Men", "Action")
+    recommendation_system.add_movie("Terminator 2: Judgment Day ", "Action")
+
+    # Comedy movies
+    recommendation_system.add_movie("Game Night", "Comedy")
+    recommendation_system.add_movie("Free Guy", "Comedy")
+    recommendation_system.add_movie("The Mask", "Comedy")
+    recommendation_system.add_movie("Ghostbusters", "Comedy")
+    recommendation_system.add_movie("Booksmart", "Comedy")
+    recommendation_system.add_movie("Vacation Friends", "Comedy")
+    recommendation_system.add_movie("Spy", "Comedy")
+    recommendation_system.add_movie("The French Dispatch", "Comedy")
+
+    # Drama movies
+    recommendation_system.add_movie("Dune", "Drama")
+    recommendation_system.add_movie("Oppenheimer", "Drama")
+    recommendation_system.add_movie("The Power of the Dog", "Drama")
+    recommendation_system.add_movie("CODA", "Drama")
+    recommendation_system.add_movie("Belfast", "Drama")
+    recommendation_system.add_movie("The Lost Daughter", "Drama")
+    recommendation_system.add_movie("Spencer", "Drama")
+    recommendation_system.add_movie("Dunkirk", "Drama")
+
+    # Horror movies
+    recommendation_system.add_movie("IT", "Horror")
+    recommendation_system.add_movie("The Conjuring", "Horror")
+    recommendation_system.add_movie("Evil Dead Rise", "Horror")
+    recommendation_system.add_movie("Annabelle", "Horror")
+    recommendation_system.add_movie("The Pope's Exorcist", "Horror")
+    recommendation_system.add_movie("Insidious", "Horror")
+recommendation_system.add_movie("Venom", "Action")
+    recommendation_system.add_movie("X-Men", "Action")
+    recommendation_system.add_movie("Terminator 2: Judgment Day ", "Action")
+
+    # Comedy movies
+    recommendation_system.add_movie("Game Night", "Comedy")
+    recommendation_system.add_movie("Free Guy", "Comedy")
+    recommendation_system.add_movie("The Mask", "Comedy")
+    recommendation_system.add_movie("Ghostbusters", "Comedy")
+    recommendation_system.add_movie("Booksmart", "Comedy")
+    recommendation_system.add_movie("Vacation Friends", "Comedy")
+    recommendation_system.add_movie("Spy", "Comedy")
+    recommendation_system.add_movie("The French Dispatch", "Comedy")
+
+    # Drama movies
+    recommendation_system.add_movie("Dune", "Drama")
+    recommendation_system.add_movie("Oppenheimer", "Drama")
+    recommendation_system.add_movie("The Power of the Dog", "Drama")
+    recommendation_system.add_movie("CODA", "Drama")
+    recommendation_system.add_movie("Belfast", "Drama")
+    recommendation_system.add_movie("The Lost Daughter", "Drama")
+    recommendation_system.add_movie("Spencer", "Drama")
+    recommendation_system.add_movie("Dunkirk", "Drama")
+
+    # Horror movies
+    recommendation_system.add_movie("IT", "Horror")
+    recommendation_system.add_movie("The Conjuring", "Horror")
+    recommendation_system.add_movie("Evil Dead Rise", "Horror")
+    recommendation_system.add_movie("Annabelle", "Horror")
+    recommendation_system.add_movie("The Pope's Exorcist", "Horror")
+    recommendation_system.add_movie("Insidious", "Horror")
